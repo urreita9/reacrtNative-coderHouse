@@ -18,6 +18,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import Groups from './src/pages/groups/Groups';
 import SignIn from './src/pages/signIn/SignIn';
 import SignUp from './src/pages/signUp/SignUp';
 
@@ -29,7 +30,8 @@ const App = () => {
         resizeMode="cover"
         style={styles.image}>
         {/* <SignIn /> */}
-        <SignUp />
+        {/* <SignUp /> */}
+        <Groups />
       </ImageBackground>
     </View>
   );
