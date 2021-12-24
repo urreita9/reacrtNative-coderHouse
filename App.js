@@ -19,6 +19,7 @@ import {
   View,
 } from 'react-native';
 import Groups from './src/pages/groups/Groups';
+import Home from './src/pages/home/Home';
 import SignIn from './src/pages/signIn/SignIn';
 import SignUp from './src/pages/signUp/SignUp';
 
@@ -31,7 +32,8 @@ const App = () => {
         style={styles.image}>
         {/* <SignIn /> */}
         {/* <SignUp /> */}
-        <Groups />
+        {/* <Groups /> */}
+        <Home />
       </ImageBackground>
     </View>
   );
