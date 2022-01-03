@@ -9,17 +9,37 @@ import {
 } from 'react-native';
 import ButtonSign from '../../Button.js/ButtonSign';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <ImageBackground
       source={require('../../../src/assets/futbolPitch.jpg')}
       resizeMode="cover"
       style={styles.image}>
       <View>
-        <ButtonSign text={'Groups'} />
-        <ButtonSign text={'Tournaments'} />
-        <ButtonSign text={'Picks'} />
-        <ButtonSign text={'Rools'} />
+        <ButtonSign
+          text={'🧑‍🤝‍🧑 Groups'}
+          onPress={() => {
+            navigation.navigate('Groups');
+          }}
+        />
+        <ButtonSign
+          text={'🏆 Tournaments'}
+          onPress={() => {
+            navigation.navigate('Tournaments');
+          }}
+        />
+        <ButtonSign
+          text={'⚽ Next Matches'}
+          onPress={() => {
+            navigation.navigate('Next Matches');
+          }}
+        />
+        <ButtonSign
+          text={'📑 Rools'}
+          onPress={() => {
+            navigation.navigate('Rools');
+          }}
+        />
       </View>
     </ImageBackground>
   );

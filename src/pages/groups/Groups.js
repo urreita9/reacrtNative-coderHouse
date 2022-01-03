@@ -11,34 +11,97 @@ import ButtonSign from '../../Button.js/ButtonSign';
 
 import SingleGroup from '../singleGroup/SingleGroup';
 
-const Groups = () => {
+const Groups = ({navigation}) => {
   return (
     <ImageBackground
-      source={require('../../../src/assets/futbolBackground.jpg')}
+      source={require('../../../src/assets/futbolPitch.jpg')}
       resizeMode="cover"
       style={styles.image}>
       <ScrollView>
         <View style={styles.rowGroups}>
-          <SingleGroup groupLetter={'A'} />
+          <SingleGroup
+            groupLetter={'a'}
+            onPress={() => {
+              navigation.navigate('Next Matches', {
+                groupLetter: 'a',
+                navigation,
+              });
+            }}
+          />
 
-          <SingleGroup groupLetter={'B'} />
+          <SingleGroup
+            groupLetter={'b'}
+            onPress={() => {
+              navigation.navigate('Next Matches', {
+                groupLetter: 'b',
+                navigation,
+              });
+            }}
+          />
         </View>
         <View style={styles.rowGroups}>
-          <SingleGroup groupLetter={'C'} />
+          <SingleGroup
+            groupLetter={'c'}
+            onPress={() => {
+              navigation.navigate('Next Matches', {
+                groupLetter: 'c',
+                navigation,
+              });
+            }}
+          />
 
-          <SingleGroup groupLetter={'D'} />
+          <SingleGroup
+            groupLetter={'d'}
+            onPress={() => {
+              navigation.navigate('Next Matches', {
+                groupLetter: 'd',
+                navigation,
+              });
+            }}
+          />
         </View>
         <View style={styles.rowGroups}>
-          <SingleGroup groupLetter={'F'} />
+          <SingleGroup
+            groupLetter={'e'}
+            onPress={() => {
+              navigation.navigate('Next Matches', {
+                groupLetter: 'e',
+                navigation,
+              });
+            }}
+          />
 
-          <SingleGroup groupLetter={'G'} />
+          <SingleGroup
+            groupLetter={'f'}
+            onPress={() => {
+              navigation.navigate('Next Matches', {
+                groupLetter: 'f',
+                navigation,
+              });
+            }}
+          />
         </View>
         <View style={styles.rowGroups}>
-          <SingleGroup groupLetter={'H'} />
+          <SingleGroup
+            groupLetter={'g'}
+            onPress={() => {
+              navigation.navigate('Next Matches', {
+                groupLetter: 'g',
+                navigation,
+              });
+            }}
+          />
 
-          <SingleGroup groupLetter={'I'} />
+          <SingleGroup
+            groupLetter={'h'}
+            onPress={() => {
+              navigation.navigate('Next Matches', {
+                groupLetter: 'h',
+                navigation,
+              });
+            }}
+          />
         </View>
-        <ButtonSign text={'Next Matches'} />
       </ScrollView>
     </ImageBackground>
   );

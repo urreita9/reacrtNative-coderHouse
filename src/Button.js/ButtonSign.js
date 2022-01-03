@@ -1,9 +1,17 @@
 import React from 'react';
-import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  useWindowDimensions,
+} from 'react-native';
 
-const ButtonSign = ({text}) => {
+const ButtonSign = ({text, onPress, w}) => {
+  const {width} = useWindowDimensions();
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity
+      style={[styles.button, {width: w ? w : width * 0.5}]}
+      onPress={onPress}>
       <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
   );
@@ -16,8 +24,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     marginVertical: 10,
-    width: 300,
   },
-  buttonText: {color: 'white'},
+  buttonText: {color: 'white', fontSize: 20},
 });
 export default ButtonSign;

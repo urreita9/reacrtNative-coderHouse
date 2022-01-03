@@ -276,7 +276,7 @@
     }
   ],
   "teams": {
-    "A": [
+    "a": [
       {
         "id": 1,
         "name": "Russia",
@@ -314,7 +314,7 @@
         "emojiString": "\ud83c\uddfa\ud83c\uddfe"
       }
     ],
-    "B": [
+    "b": [
       {
         "id": 5,
         "name": "Portugal",
@@ -352,7 +352,7 @@
         "emojiString": "\ud83c\uddee\ud83c\uddf7"
       }
     ],
-    "C": [
+    "c": [
       {
         "id": 9,
         "name": "France",
@@ -390,7 +390,7 @@
         "emojiString": "\ud83c\udde9\ud83c\uddf0"
       }
     ],
-    "D": [
+    "d": [
       {
         "id": 13,
         "name": "Argentina",
@@ -428,7 +428,7 @@
         "emojiString": "\ud83c\uddf3\ud83c\uddec"
       }
     ],
-    "F": [
+    "e": [
       {
         "id": 17,
         "name": "Brazil",
@@ -466,7 +466,7 @@
         "emojiString": "\ud83c\uddf7\ud83c\uddf8"
       }
     ],
-    "G": [
+    "f": [
       {
         "id": 21,
         "name": "Germany",
@@ -504,7 +504,7 @@
         "emojiString": "\ud83c\uddf0\ud83c\uddf7"
       }
     ],
-    "H": [
+    "g": [
       {
         "id": 25,
         "name": "Belgium",
@@ -542,7 +542,7 @@
         "emojiString": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f"
       }
     ],
-    "I": [
+    "h": [
       {
         "id": 29,
         "name": "Poland",
@@ -610,7 +610,7 @@
           "date": "2018-06-15T17:00:00+05:00",
           "stadium": 12,
           "channels": [3, 6, 14, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -623,7 +623,7 @@
           "date": "2018-06-19T21:00:00+03:00",
           "stadium": 3,
           "channels": [3, 6, 13, 17, 15, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -636,7 +636,7 @@
           "date": "2018-06-20T18:00:00+03:00",
           "stadium": 10,
           "channels": [3, 6, 13, 17, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -649,7 +649,7 @@
           "date": "2018-06-25T18:00:00+04:00",
           "stadium": 7,
           "channels": [4, 6, 13, 18, 15, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         },
         {
@@ -662,7 +662,7 @@
           "date": "2018-06-25T17:00:00+03:00",
           "stadium": 8,
           "channels": [5, 6, 14, 18, 15, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         }
       ]
@@ -682,7 +682,7 @@
           "date": "2018-06-15T21:00:00+03:00",
           "stadium": 11,
           "channels": [3, 7, 13, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -695,7 +695,7 @@
           "date": "2018-06-15T18:00:00+03:00",
           "stadium": 3,
           "channels": [4, 6, 13, 17, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -708,7 +708,7 @@
           "date": "2018-06-20T15:00:00+03:00",
           "stadium": 1,
           "channels": [3, 6, 14, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -721,7 +721,7 @@
           "date": "2018-06-20T21:00:00+03:00",
           "stadium": 5,
           "channels": [4, 7, 13, 15, 17, 20, 21],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -734,7 +734,7 @@
           "date": "2018-06-25T21:00:00+03:00",
           "stadium": 9,
           "channels": [3, 6, 13, 18, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         },
         {
@@ -747,7 +747,7 @@
           "date": "2018-06-25T20:00:00+02:00",
           "stadium": 4,
           "channels": [3, 7, 14, 18, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         }
       ]
@@ -767,7 +767,7 @@
           "date": "2018-06-16T13:00:00+03:00",
           "stadium": 5,
           "channels": [3, 6, 14, 15, 18, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -780,7 +780,7 @@
           "date": "2018-06-16T19:00:00+03:00",
           "stadium": 9,
           "channels": [3, 6, 14, 15, 18, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -793,7 +793,7 @@
           "date": "2018-06-21T20:00:00+05:00",
           "stadium": 12,
           "channels": [4, 6, 13, 15, 18, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -806,7 +806,7 @@
           "date": "2018-06-21T16:00:00+04:00",
           "stadium": 7,
           "channels": [4, 6, 14, 15, 18, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -819,7 +819,7 @@
           "date": "2018-06-26T17:00:00+03:00",
           "stadium": 1,
           "channels": [4, 6, 13, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         },
         {
@@ -832,7 +832,7 @@
           "date": "2018-06-26T17:00:00+03:00",
           "stadium": 11,
           "channels": [5, 6, 14, 16, 19, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         }
       ]
@@ -852,7 +852,7 @@
           "date": "2018-06-16T16:00:00+03:00",
           "stadium": 2,
           "channels": [4, 6, 13, 18, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -865,7 +865,7 @@
           "date": "2018-06-16T21:00:00+02:00",
           "stadium": 4,
           "channels": [4, 6, 14, 18, 15, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -878,7 +878,7 @@
           "date": "2018-06-21T21:00:00+03:00",
           "stadium": 6,
           "channels": [3, 6, 13, 18, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -891,7 +891,7 @@
           "date": "2018-06-22T18:00:00+03:00",
           "stadium": 8,
           "channels": [3, 6, 13, 18, 15, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -904,7 +904,7 @@
           "date": "2018-06-26T21:00:00+03:00",
           "stadium": 3,
           "channels": [3, 6, 13, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         },
         {
@@ -917,7 +917,7 @@
           "date": "2018-06-26T21:00:00+03:00",
           "stadium": 10,
           "channels": [3, 6, 14, 17, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         }
       ]
@@ -937,7 +937,7 @@
           "date": "2018-06-17T21:00:00+03:00",
           "stadium": 10,
           "channels": [4, 6, 14, 18, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -950,7 +950,7 @@
           "date": "2018-06-17T16:00:00+04:00",
           "stadium": 7,
           "channels": [4, 6, 13, 18, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -963,7 +963,7 @@
           "date": "2018-06-22T15:00:00+03:00",
           "stadium": 3,
           "channels": [4, 6, 14, 18, 15, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -976,7 +976,7 @@
           "date": "2018-06-22T20:00:00+02:00",
           "stadium": 4,
           "channels": [3, 6, 13, 18, 15, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -989,7 +989,7 @@
           "date": "2018-06-27T21:00:00+03:00",
           "stadium": 2,
           "channels": [4, 6, 13, 18, 15, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         },
         {
@@ -1002,7 +1002,7 @@
           "date": "2018-06-27T21:00:00+03:00",
           "stadium": 6,
           "channels": [5, 6, 14, 18, 15, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         }
       ]
@@ -1022,7 +1022,7 @@
           "date": "2018-06-17T18:00:00+03:00",
           "stadium": 1,
           "channels": [3, 6, 14, 18, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -1035,7 +1035,7 @@
           "date": "2018-06-18T15:00:00+03:00",
           "stadium": 6,
           "channels": [4, 6, 14, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -1048,7 +1048,7 @@
           "date": "2018-06-23T21:00:00+03:00",
           "stadium": 11,
           "channels": [4, 6, 13, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -1061,7 +1061,7 @@
           "date": "2018-06-23T18:00:00+03:00",
           "stadium": 10,
           "channels": [4, 6, 13, 15, 17, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -1074,7 +1074,7 @@
           "date": "2018-06-27T17:00:00+03:00",
           "stadium": 5,
           "channels": [3, 6, 14, 18, 15, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         },
         {
@@ -1087,7 +1087,7 @@
           "date": "2018-06-27T19:00:00+05:00",
           "stadium": 12,
           "channels": [3, 6, 13, 18, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         }
       ]
@@ -1107,7 +1107,7 @@
           "date": "2018-06-18T18:00:00+03:00",
           "stadium": 11,
           "channels": [3, 6, 14, 17, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -1120,7 +1120,7 @@
           "date": "2018-06-18T21:00:00+03:00",
           "stadium": 8,
           "channels": [3, 6, 14, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -1133,7 +1133,7 @@
           "date": "2018-06-23T15:00:00+03:00",
           "stadium": 2,
           "channels": [3, 6, 13, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -1146,7 +1146,7 @@
           "date": "2018-06-24T15:00:00+03:00",
           "stadium": 6,
           "channels": [3, 6, 14, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -1159,7 +1159,7 @@
           "date": "2018-06-28T20:00:00+02:00",
           "stadium": 4,
           "channels": [4, 6, 13, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         },
         {
@@ -1172,7 +1172,7 @@
           "date": "2018-06-28T21:00:00+03:00",
           "stadium": 9,
           "channels": [5, 6, 14, 19, 16, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         }
       ]
@@ -1192,7 +1192,7 @@
           "date": "2018-06-19T18:00:00+03:00",
           "stadium": 2,
           "channels": [4, 6, 13, 18, 15, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -1205,7 +1205,7 @@
           "date": "2018-06-19T15:00:00+03:00",
           "stadium": 9,
           "channels": [3, 6, 14, 18, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 1
         },
         {
@@ -1218,7 +1218,7 @@
           "date": "2018-06-24T20:00:00+02:00",
           "stadium": 5,
           "channels": [4, 6, 13, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -1231,7 +1231,7 @@
           "date": "2018-06-24T18:00:00+03:00",
           "stadium": 12,
           "channels": [3, 6, 13, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 2
         },
         {
@@ -1244,7 +1244,7 @@
           "date": "2018-06-28T17:00:00+03:00",
           "stadium": 8,
           "channels": [3, 6, 14, 15, 17, 20, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         },
         {
@@ -1257,7 +1257,7 @@
           "date": "2018-06-28T18:00:00+04:00",
           "stadium": 7,
           "channels": [3, 6, 13, 17, 21, 22],
-          "finished": true,
+          "finished": false,
           "matchday": 3
         }
       ]
@@ -1280,7 +1280,7 @@
           "date": "2018-06-30T21:00:00+03:00",
           "stadium": 11,
           "channels": [4, 13, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 4
         },
         {
@@ -1296,7 +1296,7 @@
           "date": "2018-06-30T17:00:00+03:00",
           "stadium": 5,
           "channels": [4, 6, 13, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 4
         },
         {
@@ -1312,7 +1312,7 @@
           "date": "2018-07-01T17:00:00+03:00",
           "stadium": 1,
           "channels": [3, 13, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 4
         },
         {
@@ -1328,7 +1328,7 @@
           "date": "2018-07-01T21:00:00+03:00",
           "stadium": 6,
           "channels": [4, 6, 13, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 4
         },
         {
@@ -1344,7 +1344,7 @@
           "date": "2018-07-02T18:00:00+04:00",
           "stadium": 7,
           "channels": [3, 6, 14, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 4
         },
         {
@@ -1360,7 +1360,7 @@
           "date": "2018-07-02T21:00:00+03:00",
           "stadium": 10,
           "channels": [3, 6, 13, 16],
-          "finished": true,
+          "finished": false,
           "matchday": 4
         },
         {
@@ -1376,7 +1376,7 @@
           "date": "2018-07-03T17:00:00+03:00",
           "stadium": 3,
           "channels": [4, 6, 14, 16],
-          "finished": true,
+          "finished": false,
           "matchday": 4
         },
         {
@@ -1392,7 +1392,7 @@
           "date": "2018-07-03T21:00:00+03:00",
           "stadium": 2,
           "channels": [3, 6, 13, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 4
         }
       ]
@@ -1413,7 +1413,7 @@
           "date": "2018-07-06T17:00:00+03:00",
           "stadium": 6,
           "channels": [3, 14, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 5
         },
         {
@@ -1429,7 +1429,7 @@
           "date": "2018-07-06T21:00:00+03:00",
           "stadium": 5,
           "channels": [3, 14, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 5
         },
         {
@@ -1445,7 +1445,7 @@
           "date": "2018-07-07T21:00:00+03:00",
           "stadium": 11,
           "channels": [4, 13, 16],
-          "finished": true,
+          "finished": false,
           "matchday": 5
         },
         {
@@ -1461,7 +1461,7 @@
           "date": "2018-07-07T18:00:00+04:00",
           "stadium": 7,
           "channels": [4, 13, 16],
-          "finished": true,
+          "finished": false,
           "matchday": 5
         }
       ]
@@ -1482,7 +1482,7 @@
           "date": "2018-07-10T21:00:00+03:00",
           "stadium": 3,
           "channels": [4, 13, 16],
-          "finished": true,
+          "finished": false,
           "matchday": 6
         },
         {
@@ -1498,7 +1498,7 @@
           "date": "2018-07-11T21:00:00+03:00",
           "stadium": 1,
           "channels": [3, 13, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 6
         }
       ]
@@ -1519,7 +1519,7 @@
           "date": "2018-07-14T17:00:00+03:00",
           "stadium": 3,
           "channels": [4, 13, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 7
         }
       ]
@@ -1540,7 +1540,7 @@
           "date": "2018-07-15T18:00:00+03:00",
           "stadium": 1,
           "channels": [3, 4, 13, 15],
-          "finished": true,
+          "finished": false,
           "matchday": 7
         }
       ]

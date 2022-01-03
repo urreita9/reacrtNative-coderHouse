@@ -5,24 +5,25 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native';
 
 import data from '../../../data.json';
 
-const SingleGroup = ({groupLetter}) => {
+const SingleGroup = ({groupLetter, onPress}) => {
   return (
-    <View style={styles.stadiums}>
+    <TouchableOpacity style={styles.stadiums} onPress={onPress}>
       <Text style={{color: '#F1AB01', fontSize: 20, paddingLeft: 5}}>
-        Group {groupLetter}
+        Group {groupLetter.toUpperCase()}
       </Text>
       {data.teams[groupLetter].map((team, i) => (
-        <Text key={i} style={{color: 'white', padding: 5}}>
+        <Text key={i} style={{color: 'white', padding: 4, fontSize: 18}}>
           {team.emojiString} {''}
           {team.name}
         </Text>
       ))}
-    </View>
+    </TouchableOpacity>
   );
 };
 

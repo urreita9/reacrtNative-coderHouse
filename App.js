@@ -6,43 +6,17 @@
  * @flow strict-local
  */
 
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 
-import {
-  ImageBackground,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import Groups from './src/pages/groups/Groups';
-import Home from './src/pages/home/Home';
-import SignIn from './src/pages/signIn/SignIn';
-import SignUp from './src/pages/signUp/SignUp';
+import StackNavigator from './src/navigator/StackNavigator';
 
 const App = () => {
   return (
-    <View style={styles.appContainer}>
-      <ImageBackground
-        source={require('./src/assets/futbolBackground1.jpg')}
-        resizeMode="cover"
-        style={styles.image}>
-        {/* <SignIn /> */}
-        {/* <SignUp /> */}
-        {/* <Groups /> */}
-        <Home />
-      </ImageBackground>
-    </View>
+    <NavigationContainer>
+      <StackNavigator />
+    </NavigationContainer>
   );
 };
 
-const styles = StyleSheet.create({
-  appContainer: {
-    flex: 1,
-  },
-  image: {flex: 1, justifyContent: 'flex-end'},
-});
 export default App;

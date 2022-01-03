@@ -1,10 +1,18 @@
 import React, {useState} from 'react';
 
-import {StyleSheet, View, Text, TextInput, Image} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  TextInput,
+  Image,
+  useWindowDimensions,
+} from 'react-native';
 import ButtonSign from '../../Button.js/ButtonSign';
 const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const {width, height} = useWindowDimensions();
 
   const handleEmail = () => {
     console.log('setEmail');
@@ -12,12 +20,16 @@ const SignUp = () => {
   const handlePassword = () => {
     console.log('setPassword');
   };
+
   return (
     <>
-      <Image
-        source={require('../../assets/qatarLogo.png')}
-        style={styles.logo}
-      />
+      {width < height && (
+        <Image
+          source={require('../../assets/qatarLogo.png')}
+          style={[styles.logo, {width: width * 0.6, height: height * 0.6}]}
+        />
+      )}
+
       {/* <Text style={styles.title}>Prode Qatar 2022</Text> */}
       <View style={styles.inputContainer}>
         <TextInput placeholder="Email" style={styles.input}></TextInput>
@@ -54,11 +66,11 @@ const styles = StyleSheet.create({
     width: '70%',
   },
   logo: {
-    width: 400,
-    height: 400,
-    position: 'absolute',
-    top: 20,
+    // width: 400,
+    // height: 400,
+
     alignSelf: 'center',
+    resizeMode: 'contain',
   },
 });
 export default SignUp;
