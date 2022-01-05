@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  FlatList,
   ImageBackground,
   ScrollView,
   StyleSheet,
@@ -11,98 +12,39 @@ import ButtonSign from '../../Button.js/ButtonSign';
 
 import SingleGroup from '../singleGroup/SingleGroup';
 
+const groupsLetters = [
+  {group: 'a', key: 1},
+  {group: 'b', key: 2},
+  {group: 'c', key: 3},
+  {group: 'd', key: 4},
+  {group: 'e', key: 5},
+  {group: 'f', key: 6},
+  {group: 'g', key: 7},
+  {group: 'h', key: 8},
+];
+
 const Groups = ({navigation}) => {
   return (
     <ImageBackground
       source={require('../../../src/assets/futbolPitch.jpg')}
       resizeMode="cover"
       style={styles.image}>
-      <ScrollView>
-        <View style={styles.rowGroups}>
+      <FlatList
+        data={groupsLetters}
+        refreshing={true}
+        renderItem={({item}) => (
           <SingleGroup
-            groupLetter={'a'}
+            groupLetter={item.group}
             onPress={() => {
               navigation.navigate('Next Matches', {
-                groupLetter: 'a',
+                groupLetter: item.group,
                 navigation,
               });
             }}
           />
-
-          <SingleGroup
-            groupLetter={'b'}
-            onPress={() => {
-              navigation.navigate('Next Matches', {
-                groupLetter: 'b',
-                navigation,
-              });
-            }}
-          />
-        </View>
-        <View style={styles.rowGroups}>
-          <SingleGroup
-            groupLetter={'c'}
-            onPress={() => {
-              navigation.navigate('Next Matches', {
-                groupLetter: 'c',
-                navigation,
-              });
-            }}
-          />
-
-          <SingleGroup
-            groupLetter={'d'}
-            onPress={() => {
-              navigation.navigate('Next Matches', {
-                groupLetter: 'd',
-                navigation,
-              });
-            }}
-          />
-        </View>
-        <View style={styles.rowGroups}>
-          <SingleGroup
-            groupLetter={'e'}
-            onPress={() => {
-              navigation.navigate('Next Matches', {
-                groupLetter: 'e',
-                navigation,
-              });
-            }}
-          />
-
-          <SingleGroup
-            groupLetter={'f'}
-            onPress={() => {
-              navigation.navigate('Next Matches', {
-                groupLetter: 'f',
-                navigation,
-              });
-            }}
-          />
-        </View>
-        <View style={styles.rowGroups}>
-          <SingleGroup
-            groupLetter={'g'}
-            onPress={() => {
-              navigation.navigate('Next Matches', {
-                groupLetter: 'g',
-                navigation,
-              });
-            }}
-          />
-
-          <SingleGroup
-            groupLetter={'h'}
-            onPress={() => {
-              navigation.navigate('Next Matches', {
-                groupLetter: 'h',
-                navigation,
-              });
-            }}
-          />
-        </View>
-      </ScrollView>
+        )}
+        // numColumns={2}
+      />
     </ImageBackground>
   );
 };
@@ -113,7 +55,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
 
-  image: {flex: 1},
+  image: {flex: 1, justifyContent: 'center', alignItems: 'center'},
 });
 
 export default Groups;

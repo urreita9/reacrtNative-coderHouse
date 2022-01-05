@@ -6,11 +6,11 @@ const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleEmail = () => {
-    console.log('setEmail');
+  const handleEmail = text => {
+    setEmail(text);
   };
-  const handlePassword = () => {
-    console.log('setPassword');
+  const handlePassword = text => {
+    setPassword(text);
   };
   return (
     <>
@@ -20,11 +20,19 @@ const SignIn = () => {
       />
       {/* <Text style={styles.title}>Prode Qatar 2022</Text> */}
       <View style={styles.inputContainer}>
-        <TextInput placeholder="Email" style={styles.input}></TextInput>
-        <TextInput placeholder="Password" style={styles.input}></TextInput>
+        <TextInput
+          placeholder="Email"
+          onChangeText={text => handleEmail(text)}
+          defaultValue={email}
+          style={styles.input}></TextInput>
+        <TextInput
+          placeholder="Password"
+          onChangeText={text => handlePassword(text)}
+          defaultValue={password}
+          style={styles.input}></TextInput>
       </View>
 
-      <ButtonSign text="Sign in" />
+      <ButtonSign text="Sign in" onPress={() => console.log(email, password)} />
       <ButtonSign text="Dont have an account? Sign up" />
     </>
   );
