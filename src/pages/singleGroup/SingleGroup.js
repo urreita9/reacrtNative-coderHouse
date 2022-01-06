@@ -2,13 +2,10 @@ import React from 'react';
 
 import {
   FlatList,
-  ImageBackground,
-  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   useWindowDimensions,
-  View,
 } from 'react-native';
 
 import data from '../../../data.json';
@@ -30,12 +27,6 @@ const SingleGroup = ({groupLetter, onPress}) => {
           </Text>
         )}
       />
-      {/* {data.teams[groupLetter].map((team, i) => (
-        <Text key={i} style={{color: 'white', padding: 4, fontSize: 18}}>
-          {team.emojiString} {''}
-          {team.name}
-        </Text>
-      ))} */}
     </TouchableOpacity>
   );
 };
@@ -50,7 +41,6 @@ const styles = StyleSheet.create({
   group: {
     marginVertical: 10,
     backgroundColor: '#6C1933',
-    // width: 150,
     borderRadius: 10,
   },
   team: {color: 'white', padding: 4, fontSize: 18, marginLeft: 10},

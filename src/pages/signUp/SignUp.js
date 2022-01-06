@@ -1,47 +1,86 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import {
   StyleSheet,
   View,
-  Text,
   TextInput,
   Image,
   useWindowDimensions,
+  Alert,
 } from 'react-native';
-import ButtonSign from '../../Button.js/ButtonSign';
-const SignUp = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const {width, height} = useWindowDimensions();
+import {useDispatch} from 'react-redux';
 
-  const handleEmail = () => {
-    console.log('setEmail');
-  };
-  const handlePassword = () => {
-    console.log('setPassword');
+import {startRegister} from '../../actions/auth';
+import ButtonSign from '../../Button.js/ButtonSign';
+import {useForm} from '../../hooks/useForm';
+
+const SignUp = ({navigation}) => {
+  const {width, height} = useWindowDimensions();
+  const dispatch = useDispatch();
+  const {form, onChange, reset} = useForm({
+    name: '',
+    email: '',
+    password: '',
+    password2: '',
+  });
+
+  const {name, email, password, password2} = form;
+
+  const handleSignUp = () => {
+    if (password !== password2) {
+      return Alert.alert(
+        'Passwords dont matchup',
+        'Please be sure to write a correct password',
+        [
+          {
+            text: 'OK',
+            onPress: () => console.log('OK Pressed'),
+            options: {
+              cancelable: true,
+            },
+          },
+        ],
+      );
+    }
+    dispatch(startRegister(name, email, password));
   };
 
   return (
-    <>
+    <View style={styles.signUpContainer}>
       {width < height && (
         <Image
           source={require('../../assets/qatarLogo.png')}
-          style={[styles.logo, {width: width * 0.6, height: height * 0.6}]}
+          style={[styles.logo, {width: width * 0.4, height: height * 0.4}]}
         />
       )}
 
       {/* <Text style={styles.title}>Prode Qatar 2022</Text> */}
+
       <View style={styles.inputContainer}>
-        <TextInput placeholder="Email" style={styles.input}></TextInput>
-        <TextInput placeholder="Password" style={styles.input}></TextInput>
+        <TextInput
+          placeholder="Name"
+          style={styles.input}
+          onChangeText={value => onChange(value, 'name')}></TextInput>
+        <TextInput
+          placeholder="Email"
+          style={styles.input}
+          onChangeText={value => onChange(value, 'email')}></TextInput>
+        <TextInput
+          placeholder="Password"
+          style={styles.input}
+          onChangeText={value => onChange(value, 'password')}></TextInput>
         <TextInput
           placeholder="Repeat Password"
-          style={styles.input}></TextInput>
+          style={styles.input}
+          onChangeText={value => onChange(value, 'password2')}></TextInput>
       </View>
 
-      <ButtonSign text="Sign up" />
-      <ButtonSign text="Already have an account? Sign in" />
-    </>
+      <ButtonSign text="Sign up" onPress={handleSignUp} />
+      <ButtonSign
+        text="Already have an account? Sign in"
+        onPress={navigation.navigate('Sign In')}
+      />
+    </View>
   );
 };
 
@@ -49,7 +88,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     textAlign: 'center',
-    // marginTop: 10,
     color: 'white',
     fontWeight: '500',
     position: 'absolute',
@@ -57,6 +95,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   inputContainer: {justifyContent: 'center', alignItems: 'center'},
+  signUpContainer: {justifyContent: 'center'},
   input: {
     borderBottomColor: 'grey',
     borderBottomWidth: 1,
@@ -66,9 +105,6 @@ const styles = StyleSheet.create({
     width: '70%',
   },
   logo: {
-    // width: 400,
-    // height: 400,
-
     alignSelf: 'center',
     resizeMode: 'contain',
   },

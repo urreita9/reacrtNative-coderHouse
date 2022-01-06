@@ -1,12 +1,6 @@
 import React from 'react';
 
-import {
-  ImageBackground,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {ImageBackground, StyleSheet, Text, View} from 'react-native';
 import ButtonSign from '../../Button.js/ButtonSign';
 
 const Home = ({navigation}) => {

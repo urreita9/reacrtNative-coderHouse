@@ -1,14 +1,6 @@
 import React from 'react';
 
-import {
-  FlatList,
-  ImageBackground,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-import ButtonSign from '../../Button.js/ButtonSign';
+import {FlatList, ImageBackground, StyleSheet} from 'react-native';
 
 import SingleGroup from '../singleGroup/SingleGroup';
 
@@ -43,7 +35,6 @@ const Groups = ({navigation}) => {
             }}
           />
         )}
-        // numColumns={2}
       />
     </ImageBackground>
   );

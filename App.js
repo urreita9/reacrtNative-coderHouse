@@ -14,8 +14,6 @@ import StackNavigator from './src/navigator/StackNavigator';
 
 import {store} from './src/store/store';
 
-// https://git.heroku.com/mern-prode.git
-
 const App = () => {
   return (
     <Provider store={store}>

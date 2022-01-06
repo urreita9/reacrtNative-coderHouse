@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: 40,
-    // borderRadius: 50,
   },
   buttonText: {color: 'black', fontSize: 20, fontWeight: '500'},
 });
