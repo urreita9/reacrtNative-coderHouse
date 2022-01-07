@@ -1,8 +1,23 @@
 import React from 'react';
 import {ImageBackground, StyleSheet, TextInput, View} from 'react-native';
+import {useDispatch} from 'react-redux';
+import {createTournament} from '../../actions/tournament';
 import ButtonSign from '../../Button.js/ButtonSign';
+import {useForm} from '../../hooks/useForm';
 
 const NewTournament = ({navigation}) => {
+  const dispatch = useDispatch();
+
+  const {form, onChange, reset} = useForm({
+    name: '',
+  });
+
+  const {name} = form;
+
+  const handleNewTournament = () => {
+    dispatch(createTournament(name));
+    reset();
+  };
   return (
     <ImageBackground
       source={require('../../../src/assets/futbolPitch.jpg')}
@@ -12,17 +27,12 @@ const NewTournament = ({navigation}) => {
         <View style={styles.inputContainer}>
           <TextInput
             placeholder="Tournament Name"
-            style={styles.input}></TextInput>
+            style={styles.input}
+            defaultValue={name}
+            onChangeText={value => onChange(value, 'name')}></TextInput>
         </View>
 
-        <ButtonSign text={'Create'} w={100} />
-
-        {/* <ButtonSign
-          text={'Home'}
-          onPress={() => {
-            navigation.pop();
-          }}
-        /> */}
+        <ButtonSign text={'Create'} w={100} onPress={handleNewTournament} />
       </View>
     </ImageBackground>
   );

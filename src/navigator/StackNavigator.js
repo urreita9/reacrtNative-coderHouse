@@ -1,5 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {useEffect} from 'react';
+
 import {Text} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 import {startChecking} from '../actions/auth';
@@ -27,6 +28,7 @@ const StackNavigator = () => {
   if (checking) {
     return <Text>Wait...</Text>;
   }
+
   return (
     <Stack.Navigator
       screenOptions={{
@@ -37,11 +39,6 @@ const StackNavigator = () => {
       }}>
       {uid ? (
         <>
-          <Stack.Screen name="Sign In" component={SignIn} />
-          <Stack.Screen name="Sign Up" component={SignUp} />
-        </>
-      ) : (
-        <>
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Groups" component={Groups} />
           <Stack.Screen name="Tournaments" component={Tournaments} />
@@ -49,6 +46,11 @@ const StackNavigator = () => {
           <Stack.Screen name="Rools" component={Rools} />
           <Stack.Screen name="Pick" component={Pick} />
           <Stack.Screen name="New Tournament" component={NewTournament} />
+        </>
+      ) : (
+        <>
+          <Stack.Screen name="Sign In" component={SignIn} />
+          <Stack.Screen name="Sign Up" component={SignUp} />
         </>
       )}
     </Stack.Navigator>

@@ -45,7 +45,7 @@ const SignIn = ({navigation}) => {
       <ButtonSign text="Sign in" onPress={handleLogin} />
       <ButtonSign
         text="Dont have an account? Sign up"
-        onPress={navigation.navigate('Sign Up')}
+        onPress={() => navigation.navigate('Sign Up')}
       />
     </>
   );

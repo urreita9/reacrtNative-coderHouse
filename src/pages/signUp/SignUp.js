@@ -54,31 +54,33 @@ const SignUp = ({navigation}) => {
         />
       )}
 
-      {/* <Text style={styles.title}>Prode Qatar 2022</Text> */}
-
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Name"
           style={styles.input}
-          onChangeText={value => onChange(value, 'name')}></TextInput>
+          onChangeText={value => onChange(value, 'name')}
+          defaultValue={name}></TextInput>
         <TextInput
           placeholder="Email"
           style={styles.input}
-          onChangeText={value => onChange(value, 'email')}></TextInput>
+          onChangeText={value => onChange(value, 'email')}
+          defaultValue={email}></TextInput>
         <TextInput
           placeholder="Password"
           style={styles.input}
-          onChangeText={value => onChange(value, 'password')}></TextInput>
+          onChangeText={value => onChange(value, 'password')}
+          defaultValue={password}></TextInput>
         <TextInput
           placeholder="Repeat Password"
           style={styles.input}
-          onChangeText={value => onChange(value, 'password2')}></TextInput>
+          onChangeText={value => onChange(value, 'password2')}
+          defaultValue={password2}></TextInput>
       </View>
 
       <ButtonSign text="Sign up" onPress={handleSignUp} />
       <ButtonSign
         text="Already have an account? Sign in"
-        onPress={navigation.navigate('Sign In')}
+        onPress={() => navigation.navigate('Sign In')}
       />
     </View>
   );

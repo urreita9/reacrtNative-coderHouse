@@ -9,11 +9,6 @@ export const startLogin = (email, password) => {
     const body = await res.json();
     console.log(body);
     if (body.ok) {
-      // AsyncStorage.setItem('token', body.token);
-      // AsyncStorage.setItem(
-      //   'token-init-date',
-      //   JSON.stringify(new Date().getTime()),
-      // );
       const tokenDate = JSON.stringify(new Date().getTime());
       storeData('token', body.token);
       storeData('token-init-date', tokenDate);
@@ -48,12 +43,8 @@ export const startRegister = (name, email, password) => {
     const body = await res.json();
     console.log(body);
     if (body.ok) {
-      // AsyncStorage.setItem('token', body.token);
-      // AsyncStorage.setItem(
-      //   'token-init-date',
-      //   JSON.stringify(new Date().getTime()),
-      // );
       const tokenDate = JSON.stringify(new Date().getTime());
+
       storeData('token', body.token);
       storeData('token-init-date', tokenDate);
 
@@ -83,15 +74,12 @@ export const startChecking = () => {
     const res = await fetchWithToken('auth/renew');
     const body = await res.json();
     console.log(body);
+
     if (body.ok) {
       const tokenDate = JSON.stringify(new Date().getTime());
-      // AsyncStorage.setItem('token', body.token);
+
       storeData('token', body.token);
       storeData('token-init-date', tokenDate);
-      // AsyncStorage.setItem(
-      //   'token-init-date',
-      //   JSON.stringify(new Date().getTime()),
-      // );
 
       dispatch(
         login({
@@ -109,6 +97,17 @@ const checkingFinished = () => ({
   type: types.authCheckingFinished,
 });
 
+export const startLogout = () => {
+  return async dispatch => {
+    const clear = await AsyncStorage.clear();
+    console.log(clear);
+    dispatch(logout());
+  };
+};
+
+const logout = () => ({
+  type: types.authLogout,
+});
 const login = user => ({
   type: types.authLogin,
   payload: user,

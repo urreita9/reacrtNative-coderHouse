@@ -1,9 +1,13 @@
 import React from 'react';
 
 import {ImageBackground, StyleSheet, Text, View} from 'react-native';
+import {useDispatch} from 'react-redux';
+import {startLogout} from '../../actions/auth';
 import ButtonSign from '../../Button.js/ButtonSign';
 
 const Home = ({navigation}) => {
+  const dispatch = useDispatch();
+
   return (
     <ImageBackground
       source={require('../../../src/assets/futbolPitch.jpg')}
@@ -32,6 +36,12 @@ const Home = ({navigation}) => {
           text={'📑 Rools'}
           onPress={() => {
             navigation.navigate('Rools');
+          }}
+        />
+        <ButtonSign
+          text={'Logout'}
+          onPress={() => {
+            dispatch(startLogout());
           }}
         />
       </View>

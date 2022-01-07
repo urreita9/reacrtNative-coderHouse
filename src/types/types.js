@@ -5,4 +5,7 @@ export const types = {
   authStartRegister: '[auth] Start Register',
   authStartTokenRenewal: '[auth] Start token renewal',
   authLogout: '[auth] Logout',
+
+  tournamentCreate: '[tournament] Crate tournament',
+  tournamentJoin: '[tournament] Join tournament',
 };
